@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./scripts/prepare-for-dev.sh"
+    "dev": "./scripts/prepare-for-dev.sh",
+    "stop": "(pm2 stop all && pm2 delete all) | grep 'PM2'"
   },
   "repository": {
     "type": "git",
