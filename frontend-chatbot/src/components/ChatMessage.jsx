@@ -1,17 +1,19 @@
 import {ChatDots, Robot} from 'react-bootstrap-icons'
 import PropTypes from 'prop-types'
 
-function ChatMessage({user, message}) {
+function ChatMessage({user, message, date, hour}) {
   return (
     <div className={`d-flex ${user && 'justify-content-end'}`}>
       {user ? (
         <span className='message-right'>
           <span className='message-text'>{message}</span>
-          <ChatDots />
+          <ChatDots className='message-icon' />
+          <span> - {date} </span>
+          <span>{hour}</span>
         </span>
       ) :
       <span className='message-left'>
-        <Robot />
+        <Robot className='message-icon' />
         <span className='message-text'>{message}</span>
       </span>
       }

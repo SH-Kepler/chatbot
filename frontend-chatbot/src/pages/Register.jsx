@@ -41,8 +41,8 @@ function Register() {
   }, []);
 
   return (
-    <section className="container-login-cadastro">
-      <form className="form register" onSubmit={ onSubmit }>
+    <section className="App">
+      <form className="form" onSubmit={ onSubmit }>
         <GenericInput
           name="Email"
           keyOfInput="email"
@@ -62,7 +62,7 @@ function Register() {
 
         <div className="form__group">
           <button
-            className="btn btn--primary-dark btn--animated--left btn--register"
+            className="btn btn-primary"
             disabled={ !(email.isValid && password.isValid) }
             type="submit"
             onClick={ postEndPointLogin }

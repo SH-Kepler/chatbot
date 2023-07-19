@@ -33,8 +33,8 @@ function Login() {
   };
 
   return (
-    <section >
-      <form onSubmit={ onSubmit }>
+    <section className='App' >
+      <form className='form' onSubmit={ onSubmit }>
         <GenericInput
           name="Email"
           keyOfInput="email"
@@ -56,12 +56,14 @@ function Login() {
             disabled={ !(email.isValid && password.isValid) }
             type="submit"
             onClick={ postEndPointLogin }
+            className=" btn btn-primary"
           >
             Login
           </button>
           <button
             type="submit"
             onClick={ redirectToResgister }
+            className="ms-2 btn btn-dark"
           >
             Cadastrar
           </button>

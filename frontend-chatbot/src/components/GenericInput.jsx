@@ -37,10 +37,8 @@ function GenericInput({ name, type, validation, keyOfInput }) {
               validation(target.value, setInputsValue);
               onInputChange(target.value);
             } }
+            className=" form-control mb-2 mr-sm-2"
           />
-          <label htmlFor="genericInput">
-            { name }
-          </label>
         </div>
         <div>
           <span>{ showMessage() }</span>
