@@ -11,8 +11,10 @@ const saveChat = async (chat, email) => {
     throw new Error('Usuário não encontrado.');
   }
 
+  const parsedChat = JSON.parse(chat)
+
   // Salvar o histórico de conversa no banco de dados
-  const createChat = await Conversation.create({ conversation: chat, userId: user.id });
+  const createChat = await Conversation.create({ conversation: parsedChat, userId: user.id });
 
   const chatCallback = { user: user.email, createChat };
 
